@@ -375,7 +375,7 @@ let $start := prof:current-ms()
 let $entries := (" || string-join($stattmpl//etf:StatisticalReportTableType[1]/etf:rowExpressions/etf:expression,', ') || ")
 let $statTable :=
 <StatisticalReportTable xmlns='http://www.interactive-instruments.de/etf/2.0'>
-<type ref='" || $stattmpl//etf:StatisticalReportTableType[1]/@id || "'/>
+<type ref='" || fn:document-uri($stattmpl) || "'/>
 <entries>
 { for $entry in $entries return <entry xmlns='http://www.interactive-instruments.de/etf/2.0'>{$entry}</entry> }
 </entries>

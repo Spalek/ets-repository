@@ -1,5 +1,79 @@
 <TranslationTemplateBundle xmlns="http://www.interactive-instruments.de/etf/2.0" id="EID70a263c0-0ad7-42f2-9d4d-0d8a4ca71b52" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.interactive-instruments.de/etf/2.0 https://resources.etf-validator.net/schema/v2/service/service.xsd">
 	<translationTemplateCollections>
+    <LangTranslationTemplateCollection name="TR.parameter.name.TestCasesToIgnore">
+      <translationTemplates>
+        <TranslationTemplate name="TR.parameter.name.TestCasesToIgnore" language="de">Zu ignorierende Testfälle</TranslationTemplate>
+        <TranslationTemplate name="TR.parameter.name.TestCasesToIgnore" language="en">Test Cases to ignore</TranslationTemplate>
+      </translationTemplates>
+    </LangTranslationTemplateCollection>
+    <LangTranslationTemplateCollection name="TR.parameter.description.TestCasesToIgnore">
+      <translationTemplates>
+        <TranslationTemplate name="TR.parameter.description.TestCasesToIgnore" language="de">Ein regulärer Ausdruck. Falls die Bezeichnung eines Testfalls den regulären Ausdruck erfüllt, wird jedes der zum Testfall gehörenden Testkriterien NICHT getestet. Anderenfalls werden die Testkriterien getestet (jedoch nur falls keiner der anderen Parameter die Ausführung dieser Testkriterien verhindert). Mit dem Default-Wert '^$' werden keine Testfälle ignoriert.</TranslationTemplate>
+        <TranslationTemplate name="TR.parameter.description.TestCasesToIgnore" language="en">A regular expression. If the label of a Test Case matches the regular expression, then every Test Assertion in that Test Case will NOT be executed. No Test Case will be ignored when using the default value '^$'.</TranslationTemplate>
+      </translationTemplates>
+    </LangTranslationTemplateCollection>
+    <LangTranslationTemplateCollection name="TR.parameter.name.AssertionsToExecute">
+      <translationTemplates>
+        <TranslationTemplate name="TR.parameter.name.AssertionsToExecute" language="de">Auszuführende Testkriterien</TranslationTemplate>
+        <TranslationTemplate name="TR.parameter.name.AssertionsToExecute" language="en">Test Assertions to execute</TranslationTemplate>
+      </translationTemplates>
+    </LangTranslationTemplateCollection>
+    <LangTranslationTemplateCollection name="TR.parameter.description.AssertionsToExecute">
+      <translationTemplates>
+        <TranslationTemplate name="TR.parameter.description.AssertionsToExecute" language="de">Ein regulärer Ausdruck. Falls die Kombination von Schlüssel und Namen eines Testkriteriums, verbunden durch ' - ' (Beispiel: 'DE.55002.G.a.001 - GKB.UntergeordnetesGewaesser.geometrietyp'), den regulären Ausdruck erfüllt, wird das Testkriterium getestet (jedoch nur falls keiner der anderen Parameter die Ausführung des Testkriteriums verhindert). Ansonsten wird das Testkriterium nicht getestet. Der Default-Wert '.*' selektiert alle Testkriterien.</TranslationTemplate>
+        <TranslationTemplate name="TR.parameter.description.AssertionsToExecute" language="en">A regular expression. If the label of a Test Assertion matches the regular expression, then that Test Assertion will be executed (only if no other parameter prvents the Test Assertion from executing.) Every Test Assertions will be executed when using the default value '.*'.</TranslationTemplate>
+      </translationTemplates>
+    </LangTranslationTemplateCollection>
+    <LangTranslationTemplateCollection name="TR.parameter.name.AssertionIDsToIgnore">
+      <translationTemplates>
+        <TranslationTemplate name="TR.parameter.name.AssertionIDsToIgnore" language="de">Zu ignorierende Testkriterien</TranslationTemplate>
+        <TranslationTemplate name="TR.parameter.name.AssertionIDsToIgnore" language="en">Test Assertions to ignore</TranslationTemplate>
+      </translationTemplates>
+    </LangTranslationTemplateCollection>
+    <LangTranslationTemplateCollection name="TR.parameter.description.AssertionIDsToIgnore">
+      <translationTemplates>
+        <TranslationTemplate name="TR.parameter.description.AssertionIDsToIgnore"
+            language="de">Der Parameter wird bei Testklassen für die Filterung von Testkriterien verwendet.</TranslationTemplate>
+        <TranslationTemplate name="TR.parameter.description.AssertionIDsToIgnore"
+            language="en">This parameter is used in Test Classes in order to filter Test Assertions.</TranslationTemplate>
+      </translationTemplates>
+    </LangTranslationTemplateCollection>
+    <LangTranslationTemplateCollection name="TR.parameter.name.AssertionsToIgnore">
+      <translationTemplates>
+        <TranslationTemplate name="TR.parameter.name.AssertionsToIgnore" language="de">Zu ignorierende Testkriterien</TranslationTemplate>
+        <TranslationTemplate name="TR.parameter.name.AssertionsToIgnore" language="en">Test Assertions to ignore</TranslationTemplate>
+      </translationTemplates>
+    </LangTranslationTemplateCollection>
+    <LangTranslationTemplateCollection name="TR.parameter.description.AssertionsToIgnore">
+      <translationTemplates>
+        <TranslationTemplate name="TR.parameter.description.AssertionsToIgnore" language="de">Ein regulärer Ausdruck. Falls die Kombination von Schlüssel und Namen eines Testkriteriums, verbunden durch ' - ' (Beispiel: 'DE.55002.G.a.001 - GKB.UntergeordnetesGewaesser.geometrietyp'), den regulären Ausdruck erfüllt, wird das Testkriterium NICHT getestet. Anderenfalls wird es getestet (jedoch nur falls keiner der anderen Parameter die Ausführung des Testkriteriums verhindert). Mit dem Default-Wert '^$' werden keine Testkriterien ignoriert.</TranslationTemplate>
+        <TranslationTemplate name="TR.parameter.description.AssertionsToIgnore" language="en">A regular expression. If the label of a Test Assertion matches the regular expression, then that Test Assertion will NOT be executed. No Test Assertions will be ignored when using the default value '^$'.</TranslationTemplate>
+      </translationTemplates>
+    </LangTranslationTemplateCollection>
+    <LangTranslationTemplateCollection name="TR.parameter.name.files_to_test">
+      <translationTemplates>
+        <TranslationTemplate name="TR.parameter.name.files_to_test" language="de">Dateifilter</TranslationTemplate>
+        <TranslationTemplate name="TR.parameter.name.files_to_test" language="en">File filter</TranslationTemplate>
+      </translationTemplates>
+    </LangTranslationTemplateCollection>
+    <LangTranslationTemplateCollection name="TR.parameter.description.files_to_test">
+      <translationTemplates>
+        <TranslationTemplate name="TR.parameter.description.files_to_test" language="de">Ein regulärer Ausdruck. Jede Datei im Testobjekt, deren Dateiname den regulären Ausdruck erfüllt, wird getestet. Alle anderen Dateien werden nicht getestet. Der Standardwert '.*' selektiert alle Dateien.</TranslationTemplate>
+        <TranslationTemplate name="TR.parameter.description.files_to_test" language="en">A regular expression. Each file in the test object whose file name matches the regular expression will be tested. All other files will not be tested. The default value '.*' matches all files.</TranslationTemplate>
+      </translationTemplates>
+    </LangTranslationTemplateCollection>
+    <LangTranslationTemplateCollection name="TR.parameter.name.TestCasesToExecute">
+      <translationTemplates>
+        <TranslationTemplate name="TR.parameter.name.TestCasesToExecute" language="de">Auszuführende Testfälle</TranslationTemplate>
+        <TranslationTemplate name="TR.parameter.name.TestCasesToExecute" language="en">Test Cases to execute</TranslationTemplate>
+      </translationTemplates>
+    </LangTranslationTemplateCollection>
+    <LangTranslationTemplateCollection name="TR.parameter.description.TestCasesToExecute">
+      <translationTemplates>
+        <TranslationTemplate name="TR.parameter.description.TestCasesToExecute" language="de">Ein regulärer Ausdruck. Falls die Bezeichnung eines Testfalls den regulären Ausdruck erfüllt, wird jedes der zum Testfall gehörenden Testkriterien getestet (jedoch nur falls keiner der anderen Parameter die Ausführung eines solchen Testkriteriums verhindert). Ansonsten werden die Testkriterien nicht getestet. Der Default-Wert '.*' selektiert alle Testfälle.</TranslationTemplate>
+        <TranslationTemplate name="TR.parameter.description.TestCasesToExecute" language="en">A regular expression. If the label of a Test Case matches the regular expression, then the Test Assertions in that Test Case will be executed (only if no other parameter prvents the Test Assertion from executing.) Every Test Case will be executed when using the default value '.*'.</TranslationTemplate>
+      </translationTemplates>
+    </LangTranslationTemplateCollection>
 	  <LangTranslationTemplateCollection name="TR.blankLine">
 		 <translationTemplates>
 			<TranslationTemplate language="en" name="TR.blankLine"/>
